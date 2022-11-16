@@ -29,6 +29,8 @@
 
 .functions button {
   width: 100%;
+  font-size: 16px;
+  border-radius: 16px;
 }
 
 .bottom {
@@ -38,8 +40,17 @@
 .operators {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 24%;
   border: 2px solid green;
+  align-items: center;
+}
+
+.operators button {
+
+  margin: 5px 0px;
+  font-size: 16px;
+  border-radius: 16px;
+  width: 75%;
 }
 
 .digits {
@@ -50,5 +61,7 @@
 }
 
 .digits button {
+  padding: 8px;
+  font-size: 32px;
   border-radius: 16px;
 }
