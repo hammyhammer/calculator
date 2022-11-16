@@ -21,20 +21,20 @@
   color: white;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
+.functions {
+  width: 100%;
+  min-width: 50px;
 }
 
 .operators {
   display: flex;
-  /* flex-direction: column; */
-  border: 2px solid green
+  flex-direction: column;
+  border: 2px solid green;
 }
 
 .digits {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* flex-direction: column; */
+  flex-wrap: wrap;
+  flex-direction: column;
   border: 2px solid red;
 }
