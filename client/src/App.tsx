@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <div className='display'>
-          <span>Numbers Display Here</span>
+          <span>0</span>
         </div>
 
         <div className='functions'>
@@ -29,8 +29,8 @@ function App() {
             <button>3</button>
             <button>2</button>
             <button>1</button>
-            <button>0</button>
             <button>.</button>
+            <button className='zero'>0</button>
           </div>
 
           <div className='operators'>

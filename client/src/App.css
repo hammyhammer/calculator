@@ -19,6 +19,7 @@
   padding: 16px;
   background-color: black;
   color: white;
+  font-size: 24px;
 }
 
 .functions {
@@ -28,9 +29,11 @@
 }
 
 .functions button {
+  background-color: azure;
   width: 100%;
   font-size: 16px;
   border-radius: 16px;
+  margin: 8px 8px;
 }
 
 .bottom {
@@ -40,13 +43,12 @@
 .operators {
   display: flex;
   flex-direction: column;
-  width: 24%;
-  border: 2px solid green;
+  width: 25%;
   align-items: center;
 }
 
 .operators button {
-
+  background-color: orange;
   margin: 5px 0px;
   font-size: 16px;
   border-radius: 16px;
@@ -57,11 +59,17 @@
   flex: 1 1 33.3%;
   flex-wrap: wrap;
   flex-direction: column;
-  border: 2px solid red;
 }
 
 .digits button {
-  padding: 8px;
-  font-size: 32px;
+  background-color: darkcyan;
+  margin: 8px;
+  width: 25%;
+  padding: 0px 16px;
+  font-size: 20px;
   border-radius: 16px;
+}
+
+.digits .zero {
+  width: 58%;
 }
