@@ -73,3 +73,7 @@
 .digits .zero {
   width: 58%;
 }
+
+button:hover {
+  cursor: pointer;
+}
