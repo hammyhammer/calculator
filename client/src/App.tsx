@@ -13,7 +13,7 @@ function App() {
           <button>AC</button>
           <button>C</button>
           <button>{`()`}</button>
-          <button>xⁱ</button>
+          <button>xⁿ</button>
         </div>
 
         <div className='bottom'>
