@@ -21,15 +21,20 @@
   color: white;
 }
 
-.digits {
-  flex-wrap: wrap;
+.buttons {
+  display: flex;
   flex-direction: column;
-  border: 2px solid red;
 }
 
 .operators {
   display: flex;
-  flex-direction: column;
-  max-width: 30px;
+  /* flex-direction: column; */
   border: 2px solid green
+}
+
+.digits {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  border: 2px solid red;
 }

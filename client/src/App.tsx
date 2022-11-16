@@ -10,6 +10,16 @@ function App() {
         </div>
 
         <div className='buttons'>
+
+          <p className='operators'>
+            <button>÷</button>
+            <button>x</button>
+            <button>-</button>
+            <button>+</button>
+            <button>xⁱ</button>
+            <button>=</button>
+          </p>
+
           <p className='digits'>
             <button>9</button>
             <button>8</button>
@@ -23,14 +33,7 @@ function App() {
             <button>0</button>
 
           </p>
-          <p className='operators'>
-            <button>+</button>
-            <button>-</button>
-            <button>/</button>
-            <button>*</button>
-            <button>xⁱ</button>
-            <button>=</button>
-          </p>
+
 
         </div>
       </div>
