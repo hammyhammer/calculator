@@ -1,9 +1,37 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
 }
 
 .container {
+  display: flex;
+  background-color: gray;
+  flex-direction: column;
+  align-items: flex-end;
   border: 2px solid black;
-  /* height: 100px;
-  width: 70px; */
+  border-radius: 16px;
+  height: 300px;
+  width: 200px;
+}
+
+.display {
+  border: 2px solid yellow;
+  background-color: aqua;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.digits {
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 2px solid red;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+  max-width: 30px;
+  border: 2px solid green
 }

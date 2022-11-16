@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <span className='display'>Numbers Display Here</span>
+
         <div className='buttons'>
           <p className='digits'>
             <button>9</button>
@@ -28,6 +29,7 @@ function App() {
             <button>xⁱ</button>
             <button>=</button>
           </p>
+
         </div>
       </div>
     </div>
