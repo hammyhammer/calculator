@@ -3,19 +3,20 @@ import './App.css';
 
 function App() {
   const [value, setValue] = useState("")
+
   function updateValue(digit: string) {
     setValue(value + digit)
   }
 
   function clear(): void {
-    setValue('0')
+    setValue("")
   }
 
   return (
     <div className="App">
       <div className='container'>
         <div className='display'>
-          {value ? value : 0}
+          {value === "" ? 0 : value}
         </div>
 
         <div className='functions'>
