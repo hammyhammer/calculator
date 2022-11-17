@@ -2,10 +2,14 @@ import React, { MouseEventHandler, ReactElement, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [value, setValue] = useState("0")
+  const [value, setValue] = useState("")
   // const [test, setTest] = useState('')
   function updateValue(digit: string) {
     setValue(value + digit)
+  }
+
+  function clear(): void {
+    setValue('0')
   }
 
 
@@ -19,7 +23,7 @@ function App() {
         </div>
 
         <div className='functions'>
-          <button onClick={(event: React.MouseEvent<HTMLElement>) => setValue}>AC</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => clear()}>AC</button>
           <button>C</button>
           <button>{`()`}</button>
           <button>xⁿ</button>
