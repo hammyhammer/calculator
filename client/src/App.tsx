@@ -31,16 +31,16 @@ function App() {
 
           <div className='digits'>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
-            <button>8</button>
-            <button>7</button>
-            <button>6</button>
-            <button>5</button>
-            <button>4</button>
-            <button>3</button>
-            <button>2</button>
-            <button>1</button>
-            <button>.</button>
-            <button className='zero'>0</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('8')}>8</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('7')}>7</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('6')}>6</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('5')}>5</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('4')}>4</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('3')}>3</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('2')}>2</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('1')}>1</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('.')}>.</button>
+            <button className='zero' onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('0')}>0</button>
           </div>
 
           <div className='operators'>
