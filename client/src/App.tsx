@@ -1,12 +1,22 @@
-import React, { ReactElement } from 'react';
+import React, { MouseEventHandler, ReactElement, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [value, setValue] = useState("0")
+
+  function updateValue(digit: string) {
+    setValue(digit)
+    console.log("I am a digit")
+  }
+
+
   return (
     <div className="App">
       <div className='container'>
         <div className='display'>
-          <span>0</span>
+          <span>
+            {value}
+          </span>
         </div>
 
         <div className='functions'>
@@ -20,7 +30,7 @@ function App() {
 
 
           <div className='digits'>
-            <button>9</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
             <button>8</button>
             <button>7</button>
             <button>6</button>
