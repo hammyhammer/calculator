@@ -18,9 +18,10 @@ function App() {
   }
 
   function calculate(): void {
-    if (!operations.includes(value)) {
-      setValue(eval(value))
-    }
+    // if (!operations.includes(value)) {
+    //   setValue(eval(value).toString())
+    // }
+    setValue(eval(value).toString())
   }
 
   return (
