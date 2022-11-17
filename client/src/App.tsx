@@ -11,7 +11,6 @@ function App() {
     setValue('0')
   }
 
-
   return (
     <div className="App">
       <div className='container'>
@@ -44,10 +43,10 @@ function App() {
           </div>
 
           <div className='operators'>
-            <button>÷</button>
-            <button>x</button>
-            <button>-</button>
-            <button>+</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('÷')}>÷</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('x')}>x</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('-')}>-</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
             <button>=</button>
           </div>
         </div>
