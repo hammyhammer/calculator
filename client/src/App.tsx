@@ -2,9 +2,14 @@ import React, { MouseEventHandler, ReactElement, useState } from 'react';
 import './App.css';
 
 function App() {
+  const operations: string[] = ['.', '-', '+', 'x', '÷']
+
   const [value, setValue] = useState("")
 
   function updateValue(digit: string) {
+    if (operations.includes(digit) && value === "" || operations.includes(digit) && operations.includes(value.slice(-1))) {
+      return;
+    }
     setValue(value + digit)
   }
 
@@ -13,7 +18,9 @@ function App() {
   }
 
   function calculate(): void {
-    setValue(eval(value))
+    if (!operations.includes(value)) {
+      setValue(eval(value))
+    }
   }
 
   return (
