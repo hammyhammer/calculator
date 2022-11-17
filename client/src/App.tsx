@@ -6,7 +6,6 @@ function App() {
 
   function updateValue(digit: string) {
     setValue(digit)
-    console.log("I am a digit")
   }
 
 
@@ -20,7 +19,7 @@ function App() {
         </div>
 
         <div className='functions'>
-          <button>AC</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => setValue}>AC</button>
           <button>C</button>
           <button>{`()`}</button>
           <button>xⁿ</button>
