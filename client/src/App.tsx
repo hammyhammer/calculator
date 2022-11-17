@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   const [value, setValue] = useState("0")
-
+  // const [test, setTest] = useState('')
   function updateValue(digit: string) {
-    setValue(digit)
+    setValue(value + digit)
   }
 
 
