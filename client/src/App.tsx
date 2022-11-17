@@ -12,6 +12,10 @@ function App() {
     setValue("")
   }
 
+  function calculate(): void {
+    setValue(eval(value))
+  }
+
   return (
     <div className="App">
       <div className='container'>
@@ -48,7 +52,7 @@ function App() {
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('x')}>x</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('-')}>-</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
-            <button>=</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
           </div>
         </div>
 
