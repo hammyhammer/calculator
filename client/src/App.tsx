@@ -3,7 +3,6 @@ import './App.css';
 
 function App() {
   const [value, setValue] = useState("")
-  // const [test, setTest] = useState('')
   function updateValue(digit: string) {
     setValue(value + digit)
   }
@@ -17,9 +16,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <div className='display'>
-          <span>
-            {value}
-          </span>
+          {value ? value : 0}
         </div>
 
         <div className='functions'>
