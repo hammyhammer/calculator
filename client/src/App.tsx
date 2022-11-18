@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const operations: string[] = ['.', '-', '+', '*', '/']
 
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState<string>("")
 
   function updateValue(digit: string) {
     if (operations.includes(digit) && value === "" || operations.includes(digit) && operations.includes(value.slice(-1))) {
