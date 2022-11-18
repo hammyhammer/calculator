@@ -37,8 +37,9 @@ function App() {
 
         <div className='functions'>
           <button onClick={(event: React.MouseEvent<HTMLElement>) => clear()}>AC</button>
-          <button onClick={(event: React.MouseEvent<HTMLElement>) => remove()}>C</button>
-          <button>{`()`}</button>
+          {/* <button onClick={(event: React.MouseEvent<HTMLElement>) => remove()}>C</button> */}
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('*(')}>{`(`}</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(')')}>{`)`}</button>
           <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('**')}>xⁿ</button>
         </div>
 
