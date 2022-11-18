@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const operations: string[] = ['.', '-', '+', '*', '/']
 
-  const [value, setValue] = useState<string>("")
+  const [value, setValue] = useState("")
 
   function updateValue(digit: string) {
     if (operations.includes(digit) && value === "" || operations.includes(digit) && operations.includes(value.slice(-1))) {
@@ -28,6 +28,13 @@ function App() {
     setValue(eval(value).toString())
   }
 
+  function createDigits(): void {
+    let digits: JSX.Element[] = [];
+    for (let i = 9; i > 0; i--) {
+      digits.push(<button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(`${i}`)}>{i}</button>)
+    }
+  }
+
   return (
     <div className="App">
       <div className='container'>
@@ -47,7 +54,7 @@ function App() {
 
 
           <div className='digits'>
-            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
+            {/* <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('8')}>8</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('7')}>7</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('6')}>6</button>
@@ -55,7 +62,7 @@ function App() {
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('4')}>4</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('3')}>3</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('2')}>2</button>
-            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('1')}>1</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('1')}>1</button> */}
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('.')}>.</button>
             <button className='zero' onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('0')}>0</button>
           </div>
