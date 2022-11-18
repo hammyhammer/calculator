@@ -35,7 +35,7 @@ function App() {
           <button onClick={(event: React.MouseEvent<HTMLElement>) => clear()}>AC</button>
           <button>C</button>
           <button>{`()`}</button>
-          <button>xⁿ</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('**')}>xⁿ</button>
         </div>
 
         <div className='bottom'>
