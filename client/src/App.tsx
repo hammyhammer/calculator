@@ -2,7 +2,7 @@ import React, { MouseEventHandler, ReactElement, useState } from 'react';
 import './App.css';
 
 function App() {
-  const operations: string[] = ['.', '-', '+', 'x', '÷']
+  const operations: string[] = ['.', '-', '+', '*', '/']
 
   const [value, setValue] = useState("")
 
@@ -56,8 +56,8 @@ function App() {
           </div>
 
           <div className='operators'>
-            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('÷')}>÷</button>
-            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('x')}>x</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('/')}>÷</button>
+            <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('*')}>x</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('-')}>-</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
