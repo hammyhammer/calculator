@@ -1,13 +1,7 @@
 import React, { MouseEventHandler, ReactElement, ReactNode, useState } from 'react';
 import './App.css';
-import ButtonFunctions from './components/ButtonFunctions';
 
 function App() {
-
-  interface ValueProps {
-    value: string;
-    setValue: string;
-  }
 
   const operations: string[] = ['.', '-', '+', '*', '/']
 
@@ -29,10 +23,16 @@ function App() {
   }
 
   function calculate(): void {
-    // if (!operations.includes(value)) {
-    //   setValue(eval(value).toString())
-    // }
-    setValue(eval(value).toString())
+    if (operations.includes(value.slice(-1))) {
+      setValue("ERR")
+      if (value === "ERR") {
+        clear()
+      }
+    }
+    else if (!operations.includes(value)) {
+      setValue(eval(value).toString())
+    }
+    // setValue(eval(value).toString())
   }
 
   function createDigits(): ReactNode {
@@ -42,6 +42,7 @@ function App() {
     }
     return <div>{digits}</div>
   }
+
   return (
     <div className="App">
 
