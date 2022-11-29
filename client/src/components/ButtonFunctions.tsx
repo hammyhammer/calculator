@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { MouseEventHandler, ReactElement, useState } from 'react';
 
 // interface ValueProps {
 //   value: string;
@@ -9,13 +9,14 @@ export default function ButtonFunctions() {
 
   const operations: string[] = ['.', '-', '+', '*', '/']
 
-  const [value, setValue] = useState<string>("")
+  const [value, setValue] = useState("")
 
   function updateValue(digit: string) {
     if (operations.includes(digit) && value === "" || operations.includes(digit) && operations.includes(value.slice(-1))) {
       return;
     }
     setValue(value + digit)
+    console.log("clicked")
   }
 
   function clear(): void {

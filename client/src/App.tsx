@@ -1,8 +1,16 @@
-import React, { MouseEventHandler, ReactElement, useState } from 'react';
+import React, { MouseEventHandler, ReactElement, ReactNode, useState } from 'react';
 import './App.css';
 import ButtonFunctions from './components/ButtonFunctions';
 
+
+
 function App() {
+
+  interface ValueProps {
+    value: string;
+    setValue: string;
+  }
+
   const operations: string[] = ['.', '-', '+', '*', '/']
 
   const [value, setValue] = useState("")
@@ -29,15 +37,17 @@ function App() {
     setValue(eval(value).toString())
   }
 
-  function createDigits(): void {
+  function createDigits(): ReactNode {
     let digits: JSX.Element[] = [];
     for (let i = 9; i > 0; i--) {
       digits.push(<button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(`${i}`)}>{i}</button>)
     }
+    return <div>{digits}</div>
   }
-
+  createDigits()
   return (
     <div className="App">
+
       <div className='container'>
         <div className='display'>
           {value === "" ? 0 : value}
@@ -50,11 +60,10 @@ function App() {
           <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(')')}>{`)`}</button>
           <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('**')}>xⁿ</button>
         </div>
-        <ButtonFunctions />
 
-        {/* <div className='bottom'>
+        <div className='bottom'>
 
-
+          <p>{createDigits()}</p>
           <div className='digits'>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('8')}>8</button>
@@ -76,7 +85,7 @@ function App() {
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
           </div>
-        </div> */}
+        </div>
 
 
 
