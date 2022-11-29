@@ -18,9 +18,9 @@ function App() {
     setValue("")
   }
 
-  function remove(): void {
-    setValue(value.slice(0, -1))
-  }
+  // function remove(): void {
+  //   setValue(value.slice(0, -1))
+  // }
 
   function calculate(): void {
     if (operations.includes(value.slice(-1))) {
@@ -32,6 +32,7 @@ function App() {
     else if (!operations.includes(value)) {
       setValue(eval(value).toString())
     }
+    console.log(value)
     // setValue(eval(value).toString())
   }
 
@@ -74,9 +75,6 @@ function App() {
             <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
           </div>
         </div>
-
-
-
       </div>
     </div>
   );
