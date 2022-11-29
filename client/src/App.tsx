@@ -38,7 +38,7 @@ function App() {
   function createDigits(): ReactNode {
     let digits: JSX.Element[] = [];
     for (let i = 9; i > 0; i--) {
-      digits.push(<button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(`${i}`)}>{i}</button>)
+      digits.push(<button key={i} onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(`${i}`)}>{i}</button>)
     }
     return <div>{digits}</div>
   }
