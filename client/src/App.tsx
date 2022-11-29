@@ -1,5 +1,6 @@
 import React, { MouseEventHandler, ReactElement, useState } from 'react';
 import './App.css';
+import ButtonFunctions from './components/ButtonFunctions';
 
 function App() {
   const operations: string[] = ['.', '-', '+', '*', '/']
@@ -49,16 +50,12 @@ function App() {
           <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue(')')}>{`)`}</button>
           <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('**')}>xⁿ</button>
         </div>
+        <ButtonFunctions />
 
-        <div className='bottom'>
+        {/* <div className='bottom'>
 
 
           <div className='digits'>
-            {/* {return (
-              createDigits().map(digit => {
-
-            })
-            )} */}
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('8')}>8</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('7')}>7</button>
@@ -79,7 +76,7 @@ function App() {
             <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
             <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
           </div>
-        </div>
+        </div> */}
 
 
 

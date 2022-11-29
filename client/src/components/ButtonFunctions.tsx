@@ -18,18 +18,52 @@ export default function ButtonFunctions() {
     setValue(value + digit)
   }
 
-  // function clear(): void {
-  //   setValue("")
-  // }
+  function clear(): void {
+    setValue("")
+  }
 
-  // function remove(): void {
-  //   setValue(value.slice(0, -1))
-  // }
+  function remove(): void {
+    setValue(value.slice(0, -1))
+  }
 
-  // function calculate(): void {
-  //   // if (!operations.includes(value)) {
-  //   //   setValue(eval(value).toString())
-  //   // }
-  //   setValue(eval(value).toString())
-  // }
+  function calculate(): void {
+    // if (!operations.includes(value)) {
+    //   setValue(eval(value).toString())
+    // }
+    setValue(eval(value).toString())
+  }
+  return (
+    <div>
+      <div className='bottom'>
+
+        <div className='digits'>
+          {/* {return (
+              createDigits().map(digit => {
+
+            })
+            )} */}
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('9')}>9</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('8')}>8</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('7')}>7</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('6')}>6</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('5')}>5</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('4')}>4</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('3')}>3</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('2')}>2</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('1')}>1</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('.')}>.</button>
+          <button className='zero' onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('0')}>0</button>
+        </div>
+
+        <div className='operators'>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('/')}>÷</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('*')}>x</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('-')}>-</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => updateValue('+')}>+</button>
+          <button onClick={(event: React.MouseEvent<HTMLElement>) => calculate()}>=</button>
+        </div>
+      </div>
+    </div>
+  )
 }
+
