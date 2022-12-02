@@ -1,14 +1,18 @@
-import React, { ReactNode, useState } from 'react';
 import './App.css';
+import React, { ReactNode, useState } from 'react';
+import ButtonFunctions from './components/ButtonFunctions';
+
 
 function App() {
 
+
+
   const operations: string[] = ['.', '-', '+', '*', '/']
 
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState<string>("")
 
   function updateValue(digit: string) {
-    if ((operations.includes(digit) && operations.includes(value.slice(-1))) || operations.includes(digit) && value === "") {
+    if (operations.includes(digit) && operations.includes(value.slice(-1)) || operations.includes(digit) && value === "") {
       return;
     }
     setValue(value + digit)
