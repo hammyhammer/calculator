@@ -1,12 +1,15 @@
 import './App.css';
 import React, { ReactNode, useState } from 'react';
-import ButtonFunctions from './components/ButtonFunctions/ButtonFunctions';
 import Buttons from './components/Buttons/Buttons';
-import { clear } from 'console';
 
 
 function App() {
-
+  interface ButtonFunctionsProps {
+    value: string,
+    clear(): void,
+    updateValue(digit: string): string,
+    calculate(): void,
+  }
   // const operations: string[] = ['.', '-', '+', '*', '/']
 
   // const [value, setValue] = useState<string>("")
@@ -50,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <Buttons value="" />
+      <Buttons />
       {/* <div className='container'>
         <div className='display'>
           {value === "" ? 0 : value}
