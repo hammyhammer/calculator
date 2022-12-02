@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactElement, ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const [value, setValue] = useState("")
 
   function updateValue(digit: string) {
-    if (operations.includes(digit) && value === "" || operations.includes(digit) && operations.includes(value.slice(-1))) {
+    if ((operations.includes(digit) && operations.includes(value.slice(-1))) || operations.includes(digit) && value === "") {
       return;
     }
     setValue(value + digit)
@@ -25,9 +25,9 @@ function App() {
   function calculate(): void {
     if (operations.includes(value.slice(-1))) {
       setValue("ERR")
-      if (value === "ERR") {
-        clear()
-      }
+    }
+    if (value === "ERR") {
+      clear()
     }
     else if (!operations.includes(value)) {
       setValue(eval(value).toString())
