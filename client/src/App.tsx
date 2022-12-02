@@ -1,11 +1,9 @@
 import './App.css';
 import React, { ReactNode, useState } from 'react';
-import ButtonFunctions from './components/ButtonFunctions';
+import ButtonFunctions from './components/ButtonFunctions/ButtonFunctions';
 
 
 function App() {
-
-
 
   const operations: string[] = ['.', '-', '+', '*', '/']
 
