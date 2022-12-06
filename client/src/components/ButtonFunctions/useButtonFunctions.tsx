@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-
-export default function ButtonFunctions() {
+export default function useButtonFunctions() {
   const operations: string[] = ['.', '-', '+', '*', '/']
 
   const [value, setValue] = useState<string>("")
@@ -30,9 +29,6 @@ export default function ButtonFunctions() {
     console.log(value)
     // setValue(eval(value).toString())
   }
-
-
-  return (
-    <div>ButtonFunctions</div>
-  )
+  return { value, setValue, updateValue, clear, calculate }
 }
+

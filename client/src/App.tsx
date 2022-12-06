@@ -1,15 +1,17 @@
 import './App.css';
 import React, { ReactNode, useState } from 'react';
-import Buttons from './components/Buttons/Buttons';
-
+import Calculator from './components/Calculator/Calculator';
 
 function App() {
-  interface ButtonFunctionsProps {
-    value: string,
-    clear(): void,
-    updateValue(digit: string): string,
-    calculate(): void,
-  }
+  // let test: ButtonFunctionsProps
+  // interface ButtonFunctionsProps {
+  //   value: string,
+  //   clear(): void,
+  //   updateValue(digit: string): string,
+  //   calculate(): void,
+  // }
+
+
   // const operations: string[] = ['.', '-', '+', '*', '/']
 
   // const [value, setValue] = useState<string>("")
@@ -52,8 +54,9 @@ function App() {
   // }
 
   return (
+
     <div className="App">
-      <Buttons />
+      <Calculator />
       {/* <div className='container'>
         <div className='display'>
           {value === "" ? 0 : value}
