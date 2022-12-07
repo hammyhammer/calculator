@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import useButtonFunctions from '../ButtonFunctions/useButtonFunctions';
+import useButtonFunctions from '../../hooks/ButtonFunctions/useButtonFunctions';
+import Display from '../Display/Display';
 
 export default function Buttons() {
   const { value, updateValue, clear, calculate } = useButtonFunctions()
@@ -13,10 +14,7 @@ export default function Buttons() {
 
   return (
     <div className='container'>
-      <div className='display'>
-        {value === "" ? 0 : value}
-      </div>
-
+      <Display />
       <div className='functions'>
         <button onClick={(event: React.MouseEvent<HTMLElement>) => clear()}>AC</button>
         {/* <button onClick={(event: React.MouseEvent<HTMLElement>) => remove()}>C</button> */}
