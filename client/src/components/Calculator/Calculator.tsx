@@ -14,7 +14,11 @@ export default function Buttons() {
 
   return (
     <div className='container'>
-      <Display />
+      {/* <Display value={value} /> */}
+
+      <div className='display'>
+        {value === "" ? "0" : value}
+      </div>
       <div className='functions'>
         <button onClick={(event: React.MouseEvent<HTMLElement>) => clear()}>AC</button>
         {/* <button onClick={(event: React.MouseEvent<HTMLElement>) => remove()}>C</button> */}
