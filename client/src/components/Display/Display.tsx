@@ -1,10 +1,9 @@
 import useButtonFunctions from '../../hooks/ButtonFunctions/useButtonFunctions';
 
-export default function Display() {
-  const { value } = useButtonFunctions()
+export default function Display(props: any) {
   return (
     <div className='display'>
-      {value === "" ? 0 : value}
+      {props.value === "" ? 0 : props.value}
     </div>
 
   )
