@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function useButtonFunctions() {
   const operations: string[] = ['.', '-', '+', '*', '/']
@@ -23,5 +23,4 @@ export default function useButtonFunctions() {
     setValue(eval(value).toString())
   }
   return { value, setValue, updateValue, clear, calculate }
-}
-
+};
