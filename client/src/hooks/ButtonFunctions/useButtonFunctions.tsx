@@ -17,10 +17,13 @@ export default function useButtonFunctions() {
   }
 
   function calculate(): void {
-    if (!operations.includes(value)) {
-      setValue(eval(value).toString())
+    try {
+      if (!operations.includes(value)) {
+        setValue(eval(value).toString())
+      }
+    } catch (error) {
+      alert("You messed up")
     }
-    setValue(eval(value).toString())
   }
   return { value, setValue, updateValue, clear, calculate }
 };
