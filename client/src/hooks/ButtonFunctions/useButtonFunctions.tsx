@@ -22,7 +22,7 @@ export default function useButtonFunctions() {
         setValue(eval(value).toString())
       }
     } catch (error) {
-      alert("You messed up")
+      alert("You entered an invalid equation.")
     }
   }
   return { value, setValue, updateValue, clear, calculate }
