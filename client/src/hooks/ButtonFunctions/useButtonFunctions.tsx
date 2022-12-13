@@ -3,6 +3,8 @@ import { useState } from 'react';
 export default function useButtonFunctions() {
   const operations: string[] = ['.', '-', '+', '*', '/']
 
+  const previousEquations: string[] = []
+
   const [value, setValue] = useState<string>("")
 
   function updateValue(digit: string): void {
@@ -20,10 +22,12 @@ export default function useButtonFunctions() {
     try {
       if (!operations.includes(value)) {
         setValue(eval(value).toString())
+        previousEquations.push(eval(value).toString())
+        console.log(previousEquations)
       }
     } catch (error) {
       alert("You entered an invalid equation.")
     }
   }
-  return { value, setValue, updateValue, clear, calculate }
+  return { value, setValue, updateValue, clear, calculate, previousEquations }
 };
