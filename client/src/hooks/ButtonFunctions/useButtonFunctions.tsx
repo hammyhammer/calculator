@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function useButtonFunctions() {
   const operations: string[] = ['.', '-', '+', '*', '/']
 
-  const previousEquations: string[] = []
+  const previousEquations: string[] = ["test", "test", "test"]
 
   const [value, setValue] = useState<string>("")
 
@@ -29,5 +29,6 @@ export default function useButtonFunctions() {
       alert("You entered an invalid equation.")
     }
   }
+  console.log(previousEquations)
   return { value, setValue, updateValue, clear, calculate, previousEquations }
 };
